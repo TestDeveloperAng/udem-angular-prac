@@ -1,0 +1,32 @@
+<div class="container">
+  <h4>Add New Servers or Blueprints</h4>
+  <div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="serverName">Server Name</label>
+        <input type="text" name="serverName" id="serverName" class="form-control" [(ngModel)]="serverName">
+      </div>
+
+      <div class="form-group">
+        <label for="serverContent">Server Content</label>
+        <input type="text" name="serverContent" id="serverContent" class="form-control" [(ngModel)]="serverContent">
+      </div>
+
+      <div class="form-group">
+        <button class="btn bnt-sm btn-primary" (click)="addServer($event)">Add Server</button>
+        <button class="btn bnt-sm btn-primary" (click)="addBlueprint($event)">Add Blueprint</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="panel panel-success" *ngFor="let server of serverElements">
+      <div class="panel-heading">{{server.name}}</div>
+      <div class="panel-body">{{server.content}}</div>
+    </div>
+  </div>
+</div>
+</div>
