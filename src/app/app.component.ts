@@ -10,7 +10,13 @@ export class AppComponent  {
 
   serverName = '';
   serverContent = '';
-  serverElements = [];
+  serverElements = [
+    {
+      type : 'server',
+      name : 'Test 1',
+      content : 'Just Content'
+    }
+  ];
 
   addServer(data : Event){
     this.serverElements.push({
