@@ -1,6 +1,11 @@
 <div class="container">
   <h4>Add New Servers or Blueprints</h4>
+ 
   <app-create-server (serverCreated)="onServerCreated($event)"></app-create-server>
 
-  <app-display-server></app-display-server>
+ <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <app-display-server></app-display-server>
+    </div>
+  </div>
 </div>
