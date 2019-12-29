@@ -18,13 +18,13 @@ export class AppComponent  {
     }
   ];
 
-  addServer(data : Event){
-    this.serverElements.push({
-      type : 'server',
-      name : this.serverName,
-      content : this.serverContent
-    })
-  }
+  // addServer(data : Event){
+  //   this.serverElements.push({
+  //     type : 'server',
+  //     name : this.serverName,
+  //     content : this.serverContent
+  //   })
+  // }
 
   addBlueprint(data:Event){
     this.serverElements.push({

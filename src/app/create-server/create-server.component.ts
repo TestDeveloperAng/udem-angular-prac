@@ -12,4 +12,12 @@ export class CreateServerComponent implements OnInit {
   ngOnInit() {
   }
 
+  // addServer(data : Event){
+  //   this.serverElements.push({
+  //     type : 'server',
+  //     name : this.serverName,
+  //     content : this.serverContent
+  //   })
+  // }
+
 }
