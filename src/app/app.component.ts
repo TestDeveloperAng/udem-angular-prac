@@ -27,6 +27,14 @@ export class AppComponent  {
     console.log(this.serverElements);
   }
 
+  onBlueprintCreated(serverData :{name :string, content : string}){
+    this.serverElements.push({
+      type: 'blueprint',
+      name : serverData.name,
+      content : serverData.content
+    })
+  }
+
   // addServer(data : Event){
   //   this.serverElements.push({
   //     type : 'server',
