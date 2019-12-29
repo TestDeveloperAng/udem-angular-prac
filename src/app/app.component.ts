@@ -35,12 +35,12 @@ export class AppComponent  {
   //   })
   // }
 
-  addBlueprint(data:Event){
-    this.serverElements.push({
-      type : 'blueprint',
-      name : this.serverName,
-      content : this.serverContent
-    })
-  }
+  // addBlueprint(data:Event){
+  //   this.serverElements.push({
+  //     type : 'blueprint',
+  //     name : this.serverName,
+  //     content : this.serverContent
+  //   })
+  // }
 
 }
