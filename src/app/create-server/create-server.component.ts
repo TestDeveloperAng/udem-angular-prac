@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 
 @Component({
   selector: 'app-create-server',
@@ -7,17 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateServerComponent implements OnInit {
 
+  @Output() serverCreated = new EventEmitter<{type:string,name:string,content:string}>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  // addServer(data : Event){
-  //   this.serverElements.push({
-  //     type : 'server',
-  //     name : this.serverName,
-  //     content : this.serverContent
-  //   })
-  // }
+  serverName = '';
+  serverContent = '';
+  
+  addServer(data : Event){
+    this.serverCreated.emit({
+      type : 'server',
+      name : this.serverName,
+      content : this.serverContent
+    })
+  }
 
 }
