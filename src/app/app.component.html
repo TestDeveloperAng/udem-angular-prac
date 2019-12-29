@@ -1,6 +1,6 @@
 <div class="container">
   <h4>Add New Servers or Blueprints</h4>
-  <app-create-server></app-create-server>
+  <app-create-server (serverCreated)="onServerCreated($data)"></app-create-server>
 
   <app-display-server></app-display-server>
 </div>

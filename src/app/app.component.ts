@@ -17,6 +17,16 @@ export class AppComponent  {
     }
   ];
 
+  onServerCreated(serverData : {type:string,name : string,content:string})
+  {
+    this.serverElements.push({
+       type : 'server',
+       name : serverData.name,
+       content : serverData.content
+    });
+    console.log(this.serverElements);
+  }
+
   // addServer(data : Event){
   //   this.serverElements.push({
   //     type : 'server',

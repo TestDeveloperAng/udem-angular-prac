@@ -7,7 +7,7 @@ import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 })
 export class CreateServerComponent implements OnInit {
 
-  @Output() serverCreated = new EventEmitter<{type:string,name:string,content:string}>();
+  @Output() serverCreated = new EventEmitter<{name:string,content:string}>();
   constructor() { }
 
   ngOnInit() {
@@ -18,7 +18,6 @@ export class CreateServerComponent implements OnInit {
   
   addServer(data : Event){
     this.serverCreated.emit({
-      type : 'server',
       name : this.serverName,
       content : this.serverContent
     })
