@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,ContentChild } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-server',
@@ -8,11 +8,9 @@ import { Component, OnInit,Input,ContentChild } from '@angular/core';
 export class DisplayServerComponent implements OnInit {
 
   @Input() server;
-  @ContentChild('panelDiv',{static : true}) panelDiv;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.panelDiv.nativeElement.textContent);
   }
 
 }
