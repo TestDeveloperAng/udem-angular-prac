@@ -1,4 +1,4 @@
-import { Component, OnInit,EventEmitter,Output } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output,ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-create-server',
@@ -17,10 +17,13 @@ export class CreateServerComponent implements OnInit {
   ngOnInit() {
   }
 
+  @ContentChild('normalpara', {static:true}) normalpara;
+
   serverName = '';
   serverContent = '';
   
-  addServer(data : Event){
+  addServer(data){
+    console.log(this.normalpara.nativeElement);
     this.serverCreated.emit({
       name : this.serverName,
       content : this.serverContent
