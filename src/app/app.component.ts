@@ -25,7 +25,7 @@ export class AppComponent  {
        name : serverData.name,
        content : serverData.content
     });
-    console.log(this.serverElements);
+    // console.log(this.serverElements);
   }
 
   onBlueprintCreated(serverData :{name :string, content : string}){
